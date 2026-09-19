@@ -63,7 +63,9 @@
   services.desktopManager.gnome.enable = true;
   
   # TLP power manager
+  services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
+  services.tlp.pd.enable = true; # for desktop integration of TLP
 
   # Configure keymap in X11
   services.xserver.xkb = {
